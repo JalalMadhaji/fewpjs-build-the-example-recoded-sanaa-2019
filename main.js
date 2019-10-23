@@ -29,9 +29,9 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
     }, 300);
   }).catch((err)=>{
     msg.innerHTML = err.massage;
-    modal.classList.remove('hidden');
+    model.classList.remove('hidden');
     setTimeout(function(){
-      modal.classList.add('hidden');
+      model.classList.add('hidden');
     },5000);
   });
 }
