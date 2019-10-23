@@ -29,6 +29,8 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
         resolve("Pretend remote server notified of action!");
       }
     }, 300);
+  }).then(res=>res.json()).then(data=>{
+    console.log(liked)
   }).catch((err)=>{
     msg.innerHTML = err;
     console.log(err)
