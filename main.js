@@ -9,7 +9,7 @@ let model = document.getElementById('modal');
 let msg = document.getElementById('modal-message');
 like.forEach(function(e){
   // e.target.addEventListener('click',mimicServerCall);
-  console.log(e.target)
+  console.log(e)
 });
 
 
