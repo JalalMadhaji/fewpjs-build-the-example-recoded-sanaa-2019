@@ -22,7 +22,7 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
     setTimeout(function() {
       let isRandomFailure = Math.random() < .2
       if (isRandomFailure) {
-        reject("Random server error. Try again.")..catch((err)=>{
+        reject("Random server error. Try again.").catch((err)=>{
           msg.innerHTML = err.massage;
           model.classList.remove('hidden');
           setTimeout(function(){
