@@ -4,10 +4,13 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
-let like = document.querySelector('.like-glyph');
+let like = document.querySelectorAll('.like-glyph');
 let model = document.getElementById('modal');
 let msg = model.getElementById('modal-message');
-like.addEventListener('click',mimicServerCall);
+like.forEach(function(e){
+  e.target.addEventListener('click',mimicServerCall);
+  console.log(e.target)
+});
 
 
 //------------------------------------------------------------------------------
