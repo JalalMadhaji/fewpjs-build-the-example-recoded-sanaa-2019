@@ -30,8 +30,13 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
       }
     }, 300);
   }).then(res=>{
-    liked.innerHTML = FULL_HEART;
-    liked.classList.add('activated-heart');
+    if(liked.innerHTML = EMPTY_HEART){
+      liked.innerHTML = FULL_HEART;
+      liked.classList.add('activated-heart');
+    }else{
+      liked.innerHTML = EMPTY_HEART;
+      liked.classList.remove('activated-heart');
+    }
   }).catch((err)=>{
     msg.innerHTML = err;
     console.log(err)
