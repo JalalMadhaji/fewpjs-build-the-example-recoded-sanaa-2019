@@ -30,6 +30,7 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
       }
     }, 300);
   }).then(res=>{
+    console.log(liked.innerHTML)
     if(liked.innerHTML = EMPTY_HEART){
       liked.innerHTML = FULL_HEART;
       liked.classList.add('activated-heart');
