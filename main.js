@@ -28,7 +28,7 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
       }
     }, 300);
   }).catch((err)=>{
-    msg.innerHTML = err.massage;
+    msg.innerHTML = err;
     console.log(err)
     model.classList.remove('hidden');
     setTimeout(function(){
