@@ -4,7 +4,10 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
-
+let like = document.querySelector('.like-glyph');
+let model = document.getElementById('modal');
+let msg = model.getElementById('modal-message');
+like.addEventListener('click',mimicServerCall);
 
 
 //------------------------------------------------------------------------------
@@ -21,5 +24,11 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
         resolve("Pretend remote server notified of action!");
       }
     }, 300);
+  }).catch((err)=>{
+    msg.innerHTML = err.massage;
+    modal.classList.remove('hidden');
+    setTimeout(function(){
+      modal.classList.add('hidden');
+    },5000);
   });
 }
