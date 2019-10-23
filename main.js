@@ -10,9 +10,7 @@ let msg = document.getElementById('modal-message');
 let liked;
 like.forEach(function(e){
   e.addEventListener('click',mimicServerCall);
-  liked = '';
   liked = e;
-  console.log(e)
 });
 
 
