@@ -8,7 +8,7 @@ let like = document.querySelectorAll('.like-glyph');
 let model = document.getElementById('modal');
 let msg = document.getElementById('modal-message');
 like.forEach(function(e){
-  // e.target.addEventListener('click',mimicServerCall);
+  e.addEventListener('click',mimicServerCall);
   console.log(e)
 });
 
